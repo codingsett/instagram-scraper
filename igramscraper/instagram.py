@@ -871,7 +871,7 @@ class Instagram:
 
             edgesArray = jsonResponse['data']['user']['edge_followed_by'][
                 'edges']
-            if len(edgesArray) == 0:
+            if len(edgesArray) == 0 and index > 2:
                 InstagramException(
                     f'Failed to get followers of account id {account_id}.'
                     f' The account is private.',
